@@ -108,10 +108,10 @@ const EXPERIENCE = [
     title: "Data Analyst Intern",
     org: "M/s Pragatee Enterprises",
     points: [
-    "Engineered a SQL-driven bidding system to optimize cost estimation accuracy across infrastructure projects.",
-    "Analyzed 50+ projects to uncover profit drivers and identify cost leakages, improving decision-making.",
-    "Designed and deployed Power BI dashboards for real-time cost tracking and executive reporting.",
-    "Implemented early cost overrun detection mechanisms, enabling proactive project monitoring."
+    "Analyzed large transaction datasets to identify patterns and anomalies using SQL and Python, improving data quality and reporting accuracy.",
+    "Built dashboards using SQL and Power BI for real-time performance tracking and executive reporting, enabling data-driven decision-making.",
+    "Automated reporting workflows to improve efficiency and reduce manual effort, resulting in faster insights delivery.",
+    "Enabled faster decision-making through clear data insights and visualizations, contributing to improved business outcomes."
 ]
   }
 ];
@@ -132,7 +132,7 @@ const CERTIFICATIONS = [
     name: "Google Data Analytics Professional Certificate",
     year: "2025",
     url: "https://drive.google.com/file/d/1bPdJuyfHFuPwSlZ6Ao7Iru_taLhZqZo0/view",
-    desc: "Covered SQL, data cleaning, visualization, and analytics workflows."
+    desc: "Focused on SQL, data cleaning, and building end-to-end analytics workflows used in real-world scenarios."
   },
   {
     name: "Deloitte Data Analytics Job Simulation - Forage",
@@ -399,6 +399,14 @@ const speedRef = useRef<HTMLDivElement | null>(null);
               <span className={heroIn ? "in" : ""}>SINGH</span>
             </h1>
 
+            <div className="hero-role " data-reveal> 
+              <div className="role-title reveal" data-reveal style={{ transitionDelay: "0.6s" }}>
+                    Data Analyst & Engineer
+              </div>
+              <div className="role-sub reveal" data-reveal style={{ transitionDelay: "0.7s" }}>
+                      Turning messy data into clear insights and reliable systems.
+              </div>
+            </div>
             
           </div>
 
@@ -431,14 +439,16 @@ const speedRef = useRef<HTMLDivElement | null>(null);
             </div>
             <div className="about-content">
               <p className="reveal" data-reveal style={{ transitionDelay: "0.1s" }}>
-                I'm a computer science graduate focused on data analytics, reporting, and building systems that actually get used.
+                I work with data - cleaning it, analyzing it, and turning it into decisions that actually get used.
               </p>
               <p className="reveal" data-reveal style={{ transitionDelay: "0.25s" }}>
-                I work mainly with SQL, Python, and BI tools to turn messy datasets into clear decisions - whether that's segmenting customers, tracking performance, or detecting anomalies.
+                My focus is on practical analytics: SQL, Python, and BI tools to solve real problems - not just build dashboards, but make them meaningful.
+                I've worked on projects involving large datasets, performance tracking, and anomaly detection - where clarity and reliability matter more than complexity.
+
               </p>
 
               <p className="reveal" data-reveal style={{ transitionDelay: "0.4s" }}>
-                I'm still early in my career, but I focus on practical work - clean logic, reliable data, and outputs that make sense to non-technical users.
+                I'm early in my career, but I value clean logic, solid fundamentals, and outputs that non-technical users can trust.
               </p>
 
               <div className="stats-row" ref={statsRef}>
@@ -726,7 +736,9 @@ const speedRef = useRef<HTMLDivElement | null>(null);
             <span>Let&apos;s work</span>
             <span className="italic">together</span>
           </h2>
-
+            <p className="contact-subtext reveal" data-reveal>
+                    If you're looking for someone who can work with data and deliver clear, reliable insights — let's connect.
+            </p>
           <div className="contact-row reveal" data-reveal>
             <a
               className="contact-email"
@@ -734,7 +746,7 @@ const speedRef = useRef<HTMLDivElement | null>(null);
               onMouseEnter={addHover}
               onMouseLeave={removeHover}
             >
-              amitesh.ks2001@gmail.com
+              → amitesh.ks2001@gmail.com
             </a>
 
             <div className="contact-socials">
