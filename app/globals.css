@@ -321,8 +321,8 @@ section {
   max-height: 800px;
 
   position: absolute;
-  top: 50%;
-  right: 0;
+  top: 48%;
+  right: 14%;
 
   transform: translateY(-50%) translateX(5vw);
 
@@ -1113,17 +1113,45 @@ footer span {
 }
 @media (max-width:768px) {
   nav {
-    padding:20px 24px
+    overflow-x: auto;
+    white-space: nowrap;
+    padding:14px 12px
+  }
+  nav::-webkit-scrollbar {
+    display: none;
+  }
+  nav a {
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 12px;
   }
   .nav-links {
     gap:20px
   }
   section {
-    padding: 120px 48px;
+    padding: 80px 20px;
     scroll-snap-align: start;
   }
   #hero {
-    padding:0 24px
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 100px 20px 40px;
+  }
+  .her-name-line span {
+    font-size: clamp(42px, 13vw, 64px);
+    line-height: 0.95;
+  }
+  .hero-image {
+    position: relative;
+    right: auto;
+    margin-top: 40px;
+    align-self: center;
+    max-width: 85%;
+  }
+  .hero-role {
+    margin-top: 16px;
+    font-size: 14px;
+    max-width: 90%;
   }
   .hero-mascot {
     height:45vh;
@@ -1134,7 +1162,28 @@ footer span {
   .hero-corner-tr {
     display:none
   }
-  .about-grid,
+  .about-grid {
+    grid-template-columns:1fr;
+    gap:30px
+  }
+  .about-content p {
+    font-size:14px;
+    line-height: 1.6;
+  }
+  .stats-row{
+    flex-direction:column;
+    gap:20px;
+  }
+  .stat-num {
+    font-size:32px
+  }
+  .contact-headline span{
+    font: size 42px;
+  }
+  .contact-row {
+    flex-direction:column;
+    gap:20px
+  }
   .skills-grid,
   .timeline-item,
   .exp-item {
@@ -1164,9 +1213,9 @@ footer span {
   .contact-headline {
     font-size:clamp(40px,11vw,100px)
   }
-  .stats-row {
+  /* .stats-row {
     gap:32px
-  }
+  } */
   footer {
     text-align:center;
     flex-direction:column;
