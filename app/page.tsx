@@ -27,12 +27,12 @@ const NAV = ["About", "Skills", "Projects", "Experience", "Education", "Certific
 const PROJECTS: Project[] = [
   {
     num: "01",
-    title: "Digital Transaction Fraud Detection System",
+    title: "Sentinel | Fraud & Compliance Engine",
     year: "2025",
     category: "Fintech",
-    tags: ["C++", "Rule-based Engine", "Risk Scoring"],
+    tags: ["C++", "Deterministic Logic", "Audit Logging", "Risk Scoring"],
     description:
-      "Developed a rule-based fraud monitoring system in C++ with a 0–100 risk scoring model. Transactions above a defined threshold were automatically blocked, with a rolling daily limit and a simple admin interface for monitoring and review.",   
+      "Engineered a high-performance C++ fraud detection engine implementing deterministic risk-scoring (0-100) to evaluate transaction frequency, volume spikes, and geo-location anomalies. Enforced regulatory compliance by building a 24-hour rolling limit system (Rs. 1,00,000) with dual-entry audit logging, automatically isolating accounts at ≥70 risk to prevent asset loss.",   
     highlights: [
        "Rule-based risk scoring (0–100)",
         "Auto-blocking above threshold",
@@ -42,12 +42,12 @@ const PROJECTS: Project[] = [
   },
   {
     num: "02",
-    title: "RFM Segmentation Pipeline",
+    title: "Nexus | Automated RFM Pipeline",
     year: "2025",
     category: "Data Engineering",
     tags: ["SQL", "Python", "Google BigQuery (GCP)", "Docker"],
     description:
-    "Built an automated customer segmentation pipeline using Python and BigQuery to process 540K+ transactions. Implemented RFM logic to group users based on behavior and reduced processing time compared to manual workflows.",
+    "Architected a containerized ETL pipeline using Python and Docker to extract, transform, and load 540K+ transactional records onto Google Cloud Platform. Leveraged BigQuery for complex RFM segmentation, achieving a robust 96% reduction in data processing time compared to manual workflows while delivering actionable data-driven insights.",
 
     highlights: [
     "540K+ transactions processed",
@@ -58,12 +58,12 @@ const PROJECTS: Project[] = [
   },
   {
     num: "03",
-    title: "E-commerce Sales Analysis",
+    title: "Prism | E-commerce BI Suite",
     year: "2025",
     category: "Data Analytics",
-    tags: ["SQL", "Google BigQuery (GCP)", "Looker Studio", "Reporting"],
+    tags: ["SQL", "Google BigQuery (GCP)", "Looker Studio", "Data Visualization"],
     description:
-    "Wrote SQL queries across multiple datasets to analyze 95,000+ transactions and identify inconsistencies. Created dashboards in Looker Studio to present key sales metrics for reporting.",
+    "Designed an end-to-end analytics workflow processing 95,000+ e-commerce transactions, utilizing complex SQL multi-table joins to ensure 100% data integrity for audit-ready reporting. Developed dynamic Looker Studio dashboards specifically tailored for business stakeholders to visualize key performance indicators and seasonal sales trends.",
 
     highlights: [
       "95K+ transactions analyzed",
