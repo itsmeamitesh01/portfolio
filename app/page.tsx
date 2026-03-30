@@ -20,6 +20,7 @@ type TimelineItem = {
   org: string;
   desc: string;
   cgpa?: string;
+  tags?: string[]; // <-- ADD THIS LINE
 };
 
 const NAV = ["About", "Skills", "Projects", "Experience", "Education", "Certifications", "Contact"];
@@ -101,29 +102,54 @@ const SKILLS = [
   },
 ];
 
+// const EXPERIENCE = [
+//   {
+//     type: "Internship",
+//     year: "Jan 2025 - Jun 2025",
+//     title: "Data Analyst Intern",
+//     org: "M/s Pragatee Enterprises",
+//     points: [
+//     "Designed a data-backed bidding strategy framework using SQL and Excel, analyzing over 5,000 rows of historical project data to identify and prioritize key profit drivers.",
+//     "Consolidated multi-source budget variance data across 50+ projects, eliminating ~3 hours of manual reporting per week and significantly improving accuracy for the finance team.",
+//     "Developed dynamic Power BI dashboards to monitor 10+ active projects, enabling project manager to proactively track budgets and detect early cost-overruns."
+//     // "Enabled faster decision-making through clear data insights and visualizations, contributing to improved business outcomes."
+// ]
+//   }
+// ];
 const EXPERIENCE = [
   {
     type: "Internship",
-    year: "Jan 2025 - Jun 2025",
+    year: "Jun 2025 - Aug 2025", 
     title: "Data Analyst Intern",
     org: "M/s Pragatee Enterprises",
     points: [
-    "Analyzed large transaction datasets to identify patterns and anomalies using SQL and Python, improving data quality and reporting accuracy.",
-    "Built dashboards using SQL and Power BI for real-time performance tracking and executive reporting, enabling data-driven decision-making.",
-    "Automated reporting workflows to improve efficiency and reduce manual effort, resulting in faster insights delivery.",
-    "Enabled faster decision-making through clear data insights and visualizations, contributing to improved business outcomes."
-]
+      "Designed a data-backed bidding strategy framework using SQL and Excel, analyzing over 5,000 rows of historical project data to identify and prioritize key profit drivers.",
+      "Consolidated multi-source budget variance data across 50+ projects, eliminating ~3 hours of manual reporting per week and significantly improving accuracy for the finance team.",
+      "Developed dynamic Power BI dashboards to monitor 10+ active projects, enabling 4 project managers to proactively track budgets and detect early cost-overruns."
+    ],
+    tags: ["SQL", "Microsoft Excel", "Power BI", "Data Modeling"]
   }
 ];
 
+// const EDUCATION: TimelineItem[] = [
+//   {
+//     type: "Undergraduate",
+//     year: "2020 – 2024",
+//     title: "B.Tech in Computer Science and Engineering",
+//     org: "Jaypee University of Engineering and Technology · Guna",
+//     desc: "Focused on core computer science fundamentals including data structures, database systems, and object-oriented design. Applied these concepts through coursework and independent projects in data analysis and software development.",
+//     cgpa: "CGPA:8.6"
+//   },
+// ];
 const EDUCATION: TimelineItem[] = [
   {
     type: "Undergraduate",
     year: "2020 – 2024",
     title: "B.Tech in Computer Science and Engineering",
     org: "Jaypee University of Engineering and Technology · Guna",
-    desc: "Focused on core computer science fundamentals including data structures, database systems, and object-oriented design. Applied these concepts through coursework and independent projects in data analysis and software development.",
-    cgpa: "CGPA:8.6"
+    desc: "Built a rigorous technical foundation in software engineering, algorithmic problem solving, and data architecture. Applied core computer science principles to engineer scalable backend systems and optimize data pipelines.",
+    cgpa: "CGPA: 8.6",
+    tags: ["Data Structures", "Algorithms", "DBMS", "OOP", "Operating Systems"]
   },
 ];
 
@@ -137,7 +163,7 @@ const CERTIFICATIONS = [
   {
     name: "Google Data Analytics Professional Certificate",
     year: "2025",
-    url: "https://drive.google.com/file/d/1bPdJuyfHFuPwSlZ6Ao7Iru_taLhZqZo0/view",
+    url: "https://coursera.org/share/d5cf9471c40fc75328d567b9d82f4ce2",
     desc: "Applied SQL, data cleaning protocols, and end-to-end analytics workflows to derive insights from real-world datasets, demonstrating proficiency in data-driven decision-making and storytelling with data."
   },
    {
@@ -444,7 +470,7 @@ const speedRef = useRef<HTMLDivElement | null>(null);
             <div className="about-label reveal" data-reveal>
               Who I am
             </div>
-            <div className="about-content">
+            {/* <div className="about-content">
               <p className="reveal" data-reveal style={{ transitionDelay: "0.1s" }}>
                 I work with data - cleaning it, analyzing it, and turning it into decisions that actually get used.
               </p>
@@ -458,9 +484,24 @@ const speedRef = useRef<HTMLDivElement | null>(null);
                 I'm early in my career, but I value clean logic, solid fundamentals, and outputs that non-technical users can trust.
               </p>
 
-              <div className="stats-row" ref={statsRef}>
-  <div>
-    <div
+              <div className="stats-row" ref={statsRef}> */}
+              <div className="about-content">
+                <p className="reveal" data-reveal style={{ transitionDelay: "0.1s" }}>
+                  I engineer scalable data pipelines and robust backend systems that turn raw, complex information into strategic business decisions.
+                </p>
+                
+                <p className="reveal" data-reveal style={{ transitionDelay: "0.25s" }}>
+                  My expertise bridges traditional software engineering and modern analytics. From designing deterministic C++ risk-scoring engines to automating massive ETL workflows on Google Cloud Platform, I focus on building systems that prioritize data integrity, security, and high performance.
+                </p>
+
+                <p className="reveal" data-reveal style={{ transitionDelay: "0.4s" }}>
+                  I believe in practical, scalable solutions over unnecessary complexity. Whether it is consolidating multi-source financial data or designing executive Looker Studio dashboards, my goal is to deliver clean logic, reliable architecture, and actionable insights that stakeholders can trust.
+                </p>
+
+                <div className="stats-row" ref={statsRef}>
+                  {/* Keep your existing stats-row code here! */}
+                <div>
+      <div
       ref={projectsRef}
       className="stat-num reveal"
       data-reveal
@@ -661,6 +702,15 @@ const speedRef = useRef<HTMLDivElement | null>(null);
               <li key={i}>{p}</li>
             ))}
           </ul>
+          {item.tags && (
+            <div className="project-stack" style={{ marginTop: '24px' }}>
+              {item.tags.map((tag) => (
+                <span key={tag} className="stack-chip">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
 
       </div>
@@ -668,7 +718,7 @@ const speedRef = useRef<HTMLDivElement | null>(null);
   </div>
 </section>
 
-        <section id="education">
+        {/* <section id="education">
           <div className="section-meta reveal" data-reveal>
             05 / Education
           </div>
@@ -686,6 +736,39 @@ const speedRef = useRef<HTMLDivElement | null>(null);
                   {item.cgpa && <p className="cgpa">{item.cgpa}</p>}
                   </div>
                 </div>
+            ))}
+          </div>
+        </section> */}
+        <section id="education">
+          <div className="section-meta reveal" data-reveal>
+            05 / Education
+          </div>
+          <div className="timeline">
+            {EDUCATION.map((item) => (
+              <div className="timeline-item reveal" data-reveal key={item.title}>
+                <div>
+                  <div className="timeline-type">{item.type}</div>
+                  <div className="timeline-year">{item.year}</div>
+                </div>
+                <div>
+                  <div className="timeline-title">{item.title}</div>
+                  <div className="timeline-org">{item.org}</div>
+                  <p className="timeline-desc">{item.desc}</p>
+                  {item.cgpa && <p className="cgpa">{item.cgpa}</p>}
+                  
+                  {/* ADDED: The tag rendering block for your coursework */}
+                  {item.tags && (
+                    <div className="project-stack" style={{ marginTop: '16px' }}>
+                      {item.tags.map((tag) => (
+                        <span key={tag} className="stack-chip">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                  
+                </div>
+              </div>
             ))}
           </div>
         </section>

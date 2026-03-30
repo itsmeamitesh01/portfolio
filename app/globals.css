@@ -595,7 +595,8 @@ section {
 }
 .about-content p {
   color:#ffffffd9;
-  max-width:640px;
+  /* max-width:640px; */
+  max-width: 680px;
   margin-bottom:48px;
   font-size:19px;
   font-weight:400;
@@ -617,7 +618,8 @@ section {
 .stat-label {
   font-family:var(--font-mono);
   letter-spacing:.2em;
-  color:var(--sub);
+  /* color:var(--sub); */
+  color: #999; /* Changed from var(--sub) for better visibility */
   text-transform:uppercase;
   margin-top:6px;
   font-size:10px
@@ -868,7 +870,7 @@ section {
   color: var(--sub);
   font-weight: 400;
 }
-.exp-list {
+/* .exp-list {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -876,6 +878,16 @@ section {
   font-size: 15px;
   line-height: 1.6;
   margin-top: 12px;
+} */
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Increased from 10px to let the bullets breathe */
+  color: #ffffffd9;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-top: 12px;
+  max-width: 720px; /* Forces the text to wrap earlier, making it highly readable */
 }
 .exp-list li {
   position: relative;
