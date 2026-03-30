@@ -132,19 +132,19 @@ const CERTIFICATIONS = [
     name: "McKinsey Forward Program",
     year: "2025",
     url: "https://www.credly.com/badges/6fc21eca-7f2b-449b-883d-e0eba431aa57/public_url",
-    desc: "Focused on SQL, data cleaning, and building end-to-end analytics workflows used in real-world scenarios."
+    desc: "Developed a foundational digital toolkit and mastered the McKinsey approach to structured problem-solving, effective business communication, and adaptable mindsets for the future of work."
   },
   {
     name: "Google Data Analytics Professional Certificate",
     year: "2025",
     url: "https://drive.google.com/file/d/1bPdJuyfHFuPwSlZ6Ao7Iru_taLhZqZo0/view",
-    desc: "Focused on SQL, data cleaning, and building end-to-end analytics workflows used in real-world scenarios."
+    desc: "Applied SQL, data cleaning protocols, and end-to-end analytics workflows to derive insights from real-world datasets, demonstrating proficiency in data-driven decision-making and storytelling with data."
   },
    {
     name: "Deloitte Data Analytics Job Simulation - Forage",
     year: "2025",
     url: "https://drive.google.com/file/d/1Cy1gOlTarNvz5eQNKmGqnQUAzGKOBaE5/view",
-    desc: "Worked on real-world business cases involving data analysis and decision-making."
+    desc: "Completed a simulated project involving data analysis and strategic decision-making to solve complex business challenges for clients, demonstrating practical application of analytics skills in a consulting context."
   },
 
 ];
