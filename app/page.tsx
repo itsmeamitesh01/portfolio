@@ -125,7 +125,7 @@ const EXPERIENCE = [
     points: [
       "Designed a data-backed bidding strategy framework using SQL and Excel, analyzing over 5,000 rows of historical project data to identify and prioritize key profit drivers.",
       "Consolidated multi-source budget variance data across 50+ projects, eliminating ~3 hours of manual reporting per week and significantly improving accuracy for the finance team.",
-      "Developed dynamic Power BI dashboards to monitor 10+ active projects, enabling 4 project managers to proactively track budgets and detect early cost-overruns."
+      "Developed dynamic Power BI dashboards to monitor 10+ active projects, enabling project manager to proactively track budgets and detect early cost-overruns."
     ],
     tags: ["SQL", "Microsoft Excel", "Power BI", "Data Modeling"]
   }
