@@ -167,7 +167,7 @@ const CERTIFICATIONS = [
     desc: "Applied SQL, data cleaning protocols, and end-to-end analytics workflows to derive insights from real-world datasets, demonstrating proficiency in data-driven decision-making and storytelling with data."
   },
    {
-    name: "Deloitte Data Analytics Job Simulation - Forage",
+    name: "Deloitte Data Analytics Job Simulation",
     year: "2025",
     url: "https://drive.google.com/file/d/1Cy1gOlTarNvz5eQNKmGqnQUAzGKOBaE5/view",
     desc: "Completed a simulated project involving data analysis and strategic decision-making to solve complex business challenges for clients, demonstrating practical application of analytics skills in a consulting context."
